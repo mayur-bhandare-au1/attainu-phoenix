@@ -1,7 +1,7 @@
 'use strict';
 
 var N = 10;
-var col = 1;
+
 var str = "";
 
 for (var i = 1; i <= N; i++) {
