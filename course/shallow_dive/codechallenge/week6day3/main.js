@@ -15,7 +15,7 @@ for (var i = 1; i <= N; i++) {
 for (var i = 1; i <= N; i++) {
     var str = "";
 
-    for (var j = 1; j <= (N - i + 1); j++) { 
+    for (var j = 1; j <= (N - i +1); j++) { 
         str += "*";
 
     }

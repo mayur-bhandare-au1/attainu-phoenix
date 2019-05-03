@@ -1,22 +1,28 @@
 'use strict';
-
-var fs = require('fs');
-
+var fs = require("fs");
 
 
-var write = function(file, message, n) {
-
-    //REPEAT() Method to Make a new string by copying a string
-    fs.writeFile(file, message.repeat(n), function(err) {
-        if (err) {
-            throw err;
-        }
-        console.log("written");
-    });
-
+var iterate_loop = function(string,n){
+    var repeatedString = "";
+    for(var i=0;i<=n;i++){
+        repeatedString +=string
+    }
+    return repeatedString;
 }
 
 
+var messageWriter = function (fileName, message, num) {
+    
+        fs.writeFile(fileName, iterate_loop("Welcome to AttainU\n",50), function (err) {
+            if (err) throw err;
+            console.log('Written');
+        })
+  
+
+}
+
+messageWriter("test.txt", "Welcome to AttainU\n", 50);
 
 
-write('test.txt', "Welcome to attainu\n", 20);
+
+

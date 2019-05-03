@@ -21,7 +21,7 @@ var app = express();
 
 
 
-app.get("/addition/:num1/:num2", function(request, response) {
+app.get("/addition/:num1/:num2", function (request, response) {
     var num1 = request.params.num1;
     var num2 = request.params.num2;
     var result = parseInt(num1) + parseInt(num2);
@@ -30,7 +30,7 @@ app.get("/addition/:num1/:num2", function(request, response) {
 
 
 
-app.get("/substraction/:num1/:num2", function(request, response) {
+app.get("/substraction/:num1/:num2", function (request, response) {
     var num1 = request.params.num1;
     var num2 = request.params.num2;
     var result = parseInt(num1) - parseInt(num2);
@@ -39,7 +39,7 @@ app.get("/substraction/:num1/:num2", function(request, response) {
 
 
 
-app.get("/multiplication/:num1/:num2", function(request, response) {
+app.get("/multiplication/:num1/:num2", function (request, response) {
     var num1 = request.params.num1;
     var num2 = request.params.num2;
     var result = parseInt(num1) * parseInt(num2);
@@ -48,7 +48,7 @@ app.get("/multiplication/:num1/:num2", function(request, response) {
 
 
 
-app.get("/division/:num1/:num2", function(request, response) {
+app.get("/division/:num1/:num2", function (request, response) {
     var num1 = request.params.num1;
     var num2 = request.params.num2;
     var result = parseInt(num1) / parseInt(num2);

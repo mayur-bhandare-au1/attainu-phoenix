@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tennis Player</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	
+<div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-2 col-md-8 ">
+                <h1>Tennis Player Application</h1>
+                <hr>
+                <p>Welcome {{userName}}</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Player Name</th>
+                            <th scope="col">Player Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each players}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{country}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+             
+                <p></p>
+                <form action="/players" method="POST">
+                	<div class="form-group">
+                    <label for="">
+                        <input class="form-control" type="text" name="player_Name" id="name" placeholder="Enter Player Name">
+                    </label>
+                    </div>
+                    <div class="form-group">
+                    <label for="">
+                        <input class="form-control" type="text" name="country_Name" id="country" placeholder="Enter Player Country">
+                    </label>
+                    </div>
+                    <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
