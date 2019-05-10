@@ -3,6 +3,7 @@ var fs = require("fs");
 class MyFile{
 	constructor(value){
 		this.data = value;
+		value = this.data;
 	}
 
 	get Data(){
@@ -22,5 +23,5 @@ let obj = new MyFile("abc.txt");
 
 
 console.log(obj.Data);
-obj.Data = "Hello";
+obj.Data = "Hello Test";
 console.log(obj.Data);
