@@ -22,16 +22,19 @@ objBtn.addEventListener("click",function(){
 	});
 
 
-var closureCounter = {
-	cloCount : 0,
-	cloFun: function(){
-		cloBtn();
-	} 
-}
+var closureCounter = () =>{
 
+	var counter = 0;
+	var innerClosure = () =>{
+		counter++;
+		return counter;
+	}
+	return innerClosure;
+}
+var closureCount = closureCounter();
 var cloBtn = document.getElementById("cloBtn");
 		cloBtn.addEventListener("click",function(){
-			closureCounter.cloCount ++;
+		
 			var cloUpdate = document.getElementById("closure");
-			cloUpdate.innerText = closureCounter.cloCount;
+			cloUpdate.innerText =closureCount();
 		});
