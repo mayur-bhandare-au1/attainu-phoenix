@@ -27,7 +27,7 @@ let store = createStore(scoreReducer);
 
 store.subscribe(()=>{
 	let state = store.getState();
-	console.log("Counter ==>",state);
+	console.log("Output ==>",state);
 });
 
 store.dispatch({
