@@ -1,7 +1,7 @@
 import {createStore, combineReducers} from 'redux';
-import numberReducer from './components/numberReducer.js';
-import squareReducer from './components/squareReducer.js';
-import sqrtReducer from './components/sqrtReducer.js';
+import numberReducer from './numberReducer.js';
+import squareReducer from './squareReducer.js';
+import sqrtReducer from './sqrtReducer.js';
 let reducer = combineReducers({
 	number:numberReducer,
 	square:squareReducer,
