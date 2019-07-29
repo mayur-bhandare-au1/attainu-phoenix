@@ -9,9 +9,14 @@ let searchFile = (file,string) =>{
 		if(err) throw err;
 
 		//console.log(string);
-
+          data = data.split("\n");
+          data.forEach((d,i) =>{
+          	if(d.includes(string)){
+              console.log("Line => ", i,d);
+          	}
+          })
 		//console.log(data.search(string));
-		console.log(data.indexOf(string));
+		//console.log(data.indexOf(string));
 	})
 
 
